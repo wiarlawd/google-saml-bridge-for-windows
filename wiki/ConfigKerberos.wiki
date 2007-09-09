@@ -13,8 +13,10 @@ This section covers procedures you have to follow in order to make Kerberos to w
 
 Perform:
 
-{{{ Setspn –A HTTP/www.myIISPortal.com NETBIOS_NAME_OF_IIS_SERVER
+{{{ 
+Setspn –A HTTP/www.myIISPortal.com NETBIOS_NAME_OF_IIS_SERVER
 }}}
+
 == 3.2 Using NetBIOS name, a domain accout as the Application Pool's identity.== 
 
 Create an SPN for your custom domain account
