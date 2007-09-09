@@ -7,7 +7,7 @@ Add your content here.
 
 For SAML Bridge to function correctly, Kerberos must be functioning in the content server. Even if Kerberos is enabled, some factors might force the content system to use security protocol other than Kerberos. For example, IIS uses a "Negotiate" protocol to decide whether to use Kerberos, NTLM. Because both protocols allow silent authentication for users, it's not obvious which one is really used. The selection of Kerberos or NTLM depends on several factors, one of which is whether client supports it. Most popular browsers do. The other factor sounds obvious, but it's not always the case: Kerberos must be functioning. In a Windows 2003 network environment, with Active Directory installed somewhere, Kerberos is available. But whether it's working in a IIS web site is quite a different story. Under certain situations Kerberos does not work, and additional steps need to be taken to make it work.
 
-This section covers procedures you have to follow in order to make Kerberos to work. You need to download setspn.exe, which is included in Windows 2003 SP1 support tools. For detailed information, see Microsoft knowledge base article: How to use SPNs when you configure IIS web applications.
+This section covers procedures you have to follow in order to make Kerberos to work. You need to download setspn.exe, which is included in Windows 2003 SP1 support [http://support.microsoft.com/kb/892777 tools]. For detailed information, see Microsoft knowledge base article: How to use SPNs when you configure IIS web applications.
 
 == 3.1 A DNS alias is used, Network Service as the Application Pool's identity.== 
 
