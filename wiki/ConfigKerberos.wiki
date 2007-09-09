@@ -21,8 +21,11 @@ Setspn –A HTTP/www.myIISPortal.com NETBIOS_NAME_OF_IIS_SERVER
 
 Create an SPN for your custom domain account
 
+{{{ 
 Setspn –A HTTP/NETBIOS_NAME_OF_IIS_SERVER DOMAIN\USER
 Setspn –A HTTP/NETBIOS_NAME_OF_IIS_SERVER.DOMAIN DOMAIN\USER (Need to provide fully qualified host name)
+}}}
+
 
 This will create an SPN for the Active Directory object DOMAIN\USER. You can run setspn -l DOMAIN\USER to find out what SPN accounts are under this object.
 
@@ -31,19 +34,24 @@ Note: You can only have a single SPN associated with any HTTP service (DNS) name
 == 3.3. A DNS alias is configured, and a domain user account as the Application Pool's identity.== 
 
 Perform:
+
+{{{
 Setspn –A HTTP/www.myIISPortal.com DOMAIN\USER
 Setspn –A HTTP/physical_server_short_name DOMAIN\USER
 Setspn –A HTTP/physical_server_full_name DOMAIN\USER
+}}}
 
 == 3.4. Load balanced== 
 
 There is a virtual host name and several physical host names. All the physical machines must use the same domain account for their application pool in order for Kerberos to work. This translates to the same configuration as the previous section. The virtual host name should be used to create the SPN.
 
+{{{
 Setspn –A HTTP/www.myIISCluster.com DOMAIN\USER
 Setspn –A HTTP/physical_server_1_short_name DOMAIN\USER
 Setspn –A HTTP/physical_server_1_full_name DOMAIN\USER
 Setspn –A HTTP/physical_server_2_short_name DOMAIN\USER
 Setspn –A HTTP/physical_server_2_full_name DOMAIN\USER
+}}}
 
 == 3.5. Sharepoint SPS 2003 or WSS 2.0== 
 
@@ -51,18 +59,36 @@ Before SP2 of both products, Sharepoint forces NTLM authentication on the web si
 
 To solve the problem, we need to do at least one thing, probably two would be better. First, we need to enable "Negotiate" authentication for the existing Sharepoint web sites:
 run the following commands
+
+{{{
 cd C:\Inetpub\Adminscripts
+}}}
+
 to list what's there:
+
+{{{
 cscript adsutil.vbs get w3svc/WebSite/virtual_directory/NTAuthenticationProviders
+}}}
+
 for example,
+
+{{{
 cscript adsutil.vbs get w3svc/1/NTAuthenticationProviders
+}}}
 
 This command will list the auth methods for "default web site". ("1" is the id of default web, and since we are gonna enable for the whole site, we don't need any virtual directory here. This point about virtual directory is not clear in MS article.)
 Sharepoint sites will have "NTLM" defined.
 To change it:
+
+{{{
 cscript adsutil.vbs set w3svc/ WebSite/root/NTAuthenticationProviders "Negotiate,NTLM"
+}}}
+
 for example:
+
+{{{
 cscript adsutil.vbs set w3svc/1 /NTAuthenticationProviders "Negotiate,NTLM"
+}}}
 
 See this article for details:
 http://support.microsoft.com/kb/215383
