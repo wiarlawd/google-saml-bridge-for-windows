@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+# How to configure your application to support Kerberos is out of the scope of SAML bridge. You should consult with your software vendor directly. The information below is for reference only.
 
 = How to ensure Kerberos is working =
 
