@@ -99,7 +99,7 @@ cscript adsutil.vbs set w3svc/1 /NTAuthenticationProviders "Negotiate,NTLM"
 }}}
 
 See this article for details:
-http://support.microsoft.com/kb/215383
+[http://support.microsoft.com/kb/215383 http://support.microsoft.com/kb/215383]
 
 The above step will enable an SP site to support Kerberos, and now delegation should work.
 
@@ -116,7 +116,7 @@ You need to create a new login, and assign this login the dbadmin, dbowner privi
 
 == 3. Clustered File Share using Microsoft Cluster Server (MSCS)== 
 
-Microsoft Cluster Server supports Kerberos so it's possible to support the connector. Here are the detailed steps on how to setup clustered file share. By default NTLM is used for shared resources in the cluster, that's why you have to explicitly enable Kerberos. See this knowledge base article for information on how to do this.
+Microsoft Cluster Server supports Kerberos so it's possible to support the connector. Here are the detailed [http://support.microsoft.com/kb/224967 steps] on how to setup clustered file share. By default NTLM is used for shared resources in the cluster, that's why you have to explicitly enable Kerberos. See this [http://support.microsoft.com/?kbid=302389 knowledge base article] for information on how to do this.
 
 Basically, you should define a separate group for your file share, and add both an IP and Network Name resources to this group. The Kerberos authentication is defined on Network Name, and after you enable it, that name will show up in the Active Directory under the OU Computers as if it's a physical machine. Note: there are two "names" for a Network Name. After you create a Network Name resource and then open up the property dialog box, there is a name on the General tab, and also there is a name on the Parameters tab. There is a chance that they could be different if someone changes one but not the other. The one on the Parameters tab is the one used to create the node in the Active Directory. 
 
