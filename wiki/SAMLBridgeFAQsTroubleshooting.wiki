@@ -110,7 +110,7 @@ WWW-Authenticate: NTLM
   * *Are the Content Server and the SAML Bridge on the same machine?* - See this URL:  http://support.microsoft.com/kb/896861/
 
 
-  * *How to force IIS to use a certain version of  .net framework:* - If the are multiple .NET versions on your server, it is possible that IIS it is possible that IIS is using the wrong version.  You can reconfigure the .NET framework for IIS as follows:
+  * *How to force IIS to use a certain version of  .net framework:* - If the are multiple .NET versions on your server, it is possible that IIS is using the wrong version.  You can reconfigure the .NET framework for IIS as follows:
 
         cd C:\WINDOWS\Microsoft.NET\Framework\your-version\ 
         aspnet_regiis.exe -i
