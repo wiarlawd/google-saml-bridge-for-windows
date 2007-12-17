@@ -5,9 +5,9 @@ This document goes through some FAQs and troubleshooting procedures that can be 
 
 ===Testing the SAML Bridge Login.aspx page===
 
-Q: When I test Login.aspx on the SAML Bridge no user name shows
+Q: When I test the Login.aspx on the SAML Bridge and navigate directly to the page no user name is displayed.
 
-A: This is due to not configuring Windows Integrated Authentication for the Login.aspx page in IIS or not removing "Anonynmous Access" from the page in IIS
+A: This is due to not configuring Windows Integrated Authentication for the Login.aspx page in IIS or not removing "Anonynmous Access" from the page in IIS.
 
 Q:  When I go to Login.aspx  on the SAML Bridge, I receive a message that says "ac.log permission denied."
 
@@ -19,7 +19,7 @@ A: This will happen when the ASP .NET web extension in IIS is prohibited.  To al
 
 Q: I am prompted for a password when I go to the Login.aspx page or any other page i know is using kerberos.
 
-A: Does your browser support Kerberos?  See how to enable above LINK
+A: Does your browser support Kerberos?  See below for info on configuring your browser to use Kerberos.
 
 
 ===Using the GSA Simulator===
@@ -68,7 +68,7 @@ A: See this link for more info on how to find the Negotiate Header
 
 Q: The content server is sending the Negotiate header, but my browser is still prompting me for a password.
 
-A:  See the link on configuring your Browser for Kerberos: LINK 
+A:  See the info below on configuring your Browser for Kerberos: LINK 
 
 Q:  Sharepoint is prompting for a password.  Kerberos does not seem to be configured on Sharepont.
 
@@ -76,7 +76,7 @@ A: Sharepoint forces NTLM when it is installed.  See this link to setup Kerberos
 
 Q: Does the SAML Bridge support DFS?
 
-A: DFS is not a supported content server, but some have managed to get it to work with the SAML Bridge.  See this LINK for more details.
+A: DFS is not a supported content server, but some have managed to get it to work with the SAML Bridge. 
 
 == Troubleshooting checks/methods ==
 
