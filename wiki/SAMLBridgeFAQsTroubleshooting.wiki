@@ -44,7 +44,7 @@ A: First make sure that the URL that you are testing is accessible to the SAML B
 
 Q: The Search Appliance is prompting me for a username and password. 
 
-A: This will happen if you have not selected the "Disable prompt for Basic authentication or NTLM authentication" on the " Google Search Appliance > Serving > Access Control" page of the admin console or if you have a connector configured on the "Google Search Appliance > Connector Administration > Connectors" page in the admin console.
+A: This will happen if you have not selected the "Disable prompt for Basic authentication or NTLM authentication" on the " Google Search Appliance > Serving > Access Control" page of the admin console, or if you have a connector configured on the "Google Search Appliance > Connector Administration > Connectors" page in the admin console.
 
 Q: The field "Disable prompt for Basic authentication or NTLM authentication" is not available on the " Google Search Appliance > Serving > Access Control" admin console page.
 
