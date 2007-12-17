@@ -38,7 +38,7 @@ A:  First verify that Kerberos is working when you go directly to the site by ch
 
 Q: In the gsa-simulator I am getting an "Indetermintent" response
 
-A: First make sure that the URL that you are testing is accessible to the SAML Bridge, and that it supports kerberos.  If it does, then you will need to check the ac.log.  If you see this message:  "Either a requied impersonation level was not provided...."  then most likely the .net framework is wrong version.  See this LINK to set .net framework in IIS to 2.0.
+A: First make sure that the URL that you are testing is accessible to the SAML Bridge, and that it supports kerberos.  If it does, then you will need to check the ac.log.  If you see this message:  "Either a requied impersonation level was not provided...."  then most likely the .net framework is wrong version.  See the info below to set .net framework in IIS to 2.0.
 
 ===Troubleshooting the GSA and SAML Bridge===
 
@@ -110,7 +110,7 @@ WWW-Authenticate: NTLM
   * *Are the Content Server and the SAML Bridge on the same machine?* - See this URL:  http://support.microsoft.com/kb/896861/
 
 
-  * *How to force IIS to use a certain version of  .net framework:* - If you've checked the .NET version and determined that it meets the requirements, you can reconfigure the .NET framework for IIS as follows:
+  * *How to force IIS to use a certain version of  .net framework:* - If the are multiple .NET versions on your server, it is possible that IIS it is possible that IIS is using the wrong version.  You can reconfigure the .NET framework for IIS as follows:
 
         cd C:\WINDOWS\Microsoft.NET\Framework\your-version\ 
         aspnet_regiis.exe -i
