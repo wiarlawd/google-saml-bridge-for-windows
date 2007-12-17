@@ -6,7 +6,10 @@ This document goes through some FAQs and troubleshooting procedures that can be 
 ===Testing the SAML Bridge Login.aspx page===
 
 Q: When I test Login.aspx on the SAML Bridge no user name shows
+
 A: This is due to not configuring Windows Integrated Authentication for the Login.aspx page in IIS or not removing "Anonynmous Access" from the page in IIS
+
+
 
 
 Q:  When I go to Login.aspx  on the SAML Bridge, I receive a message that says "ac.log permission denied."
