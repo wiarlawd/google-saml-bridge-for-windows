@@ -11,6 +11,7 @@ A: This is due to not configuring Windows Integrated Authentication for the Logi
 
  Q:  When I go to Login.aspx  on the SAML Bridge, I receive a message that says "ac.log permission denied."
 
+
  A:  This is due to NETWORK SERVICE not having "Full" permissions for ac.log.  Add full file permissions for NETWORK SERVICE to the file using Windows Explorer.
 
 
