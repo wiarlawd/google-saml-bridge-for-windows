@@ -64,11 +64,11 @@ and the following FAQs for additional help.
 
 Q: How do I tell if my content server supports Kerberos.
 
-A: See this link for more info on how to find the Negotiate Header
+A: See the info below for more info on how to find the Negotiate Header
 
 Q: The content server is sending the Negotiate header, but my browser is still prompting me for a password.
 
-A:  See the info below on configuring your Browser for Kerberos: LINK 
+A:  See the info below on configuring your Browser for Kerberos. 
 
 Q:  Sharepoint is prompting for a password.  Kerberos does not seem to be configured on Sharepont.
 
