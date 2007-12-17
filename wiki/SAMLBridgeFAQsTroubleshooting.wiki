@@ -14,7 +14,7 @@ Q:  When I go to Login.aspx  on the SAML Bridge, I receive a message that says "
 A:  This is due to NETWORK SERVICE not having "Full" permissions for ac.log.  Add full file permissions for NETWORK SERVICE to the file using Windows Explorer.
 
 Q: When I go to Login.aspx on the SAML Bridge I receive a 404 from IIS even though I can see that the page exists. 
- 
+
 A: This will happen when the ASP .NET web extension in IIS is prohibited.  To allow this extension, go to IIS Manager tree view, under the host name, click Web Service Extensions. In the Web Service Extensions panel, look for ASP.NET v2.0 or later.  Click on  the Allow button.
 
 Q: I am prompted for a password when I go to the Login.aspx page or any other page i know is using kerberos.
