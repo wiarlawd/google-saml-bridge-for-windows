@@ -9,11 +9,9 @@ Q: When I test Login.aspx on the SAML Bridge no user name shows
 
 A: This is due to not configuring Windows Integrated Authentication for the Login.aspx page in IIS or not removing "Anonynmous Access" from the page in IIS
 
+ Q:  When I go to Login.aspx  on the SAML Bridge, I receive a message that says "ac.log permission denied."
 
-
-
-Q:  When I go to Login.aspx  on the SAML Bridge, I receive a message that says "ac.log permission denied."
-A:  This is due to NETWORK SERVICE not having "Full" permissions for ac.log.  Add full file permissions for NETWORK SERVICE to the file using Windows Explorer.
+ A:  This is due to NETWORK SERVICE not having "Full" permissions for ac.log.  Add full file permissions for NETWORK SERVICE to the file using Windows Explorer.
 
 
 Q: When I go to Login.aspx on the SAML Bridge I receive a 404 from IIS even though I can see that the page exists. 
@@ -21,10 +19,9 @@ Q: When I go to Login.aspx on the SAML Bridge I receive a 404 from IIS even thou
 A: This will happen when the ASP .NET web extension in IIS is prohibited.  To allow this extension, go to IIS Manager tree view, under the host name, click Web Service Extensions. In the Web Service Extensions panel, look for ASP.NET v2.0 or later.  Click on  the Allow button.
 
 
+ Q: I am prompted for a password when I go to the Login.aspx page or any other page i know is using kerberos.
 
-Q: I am prompted for a password when I go to the Login.aspx page or any other page i know is using kerberos.
-
-A: Does your browser support Kerberos?  See how to enable above LINK
+ A: Does your browser support Kerberos?  See how to enable above LINK
 
 
 ===Using the GSA Simulator===
