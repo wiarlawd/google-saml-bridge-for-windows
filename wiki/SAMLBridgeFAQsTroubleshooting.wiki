@@ -34,7 +34,7 @@ A: Verify that in the web.config file for the gsa simulator the field that start
 
 Q:  I am getting a "Deny" in the gsa-simulator.
 
-A:  First verify that Kerberos is working when you go directly to the site by checking that the Content Server supports Kerberos and that your borwser supports kerberos.  Make sure that the content server you are testing against uses kerberos.  The next step is to make sure that delegation is properly setup.  See this link:  http://code.google.com/apis/searchappliance/documentation/50/admin/wia.html#prereq_activedir   Note that we have seen issues  where specifying a port when running setspn can cause delegation to fail.  Also verify that the gsa_simulator and the saml_bridge are running in IIS app pools that have the NETWORK SERVICE identity. 
+A:  First verify that Kerberos is working when you go directly to the site by checking that the Content Server supports Kerberos and that your borwser supports kerberos.  See the info below on how to do this.  The next step is to make sure that delegation is properly setup.  See this link:  http://code.google.com/apis/searchappliance/documentation/50/admin/wia.html#prereq_activedir   Note that we have seen issues  where specifying a port when running setspn can cause delegation to fail.  Also verify that the gsa-simulator and the saml-bridge are running in IIS app pools that have the NETWORK SERVICE identity. 
 
 Q: In the gsa-simulator I am getting an "Indetermintent" response
 
