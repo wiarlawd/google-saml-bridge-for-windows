@@ -89,6 +89,7 @@ A: DFS is not a supported content server, but some have managed to get it to wor
 ===Kerberos content server verification===
 
 Is Kerberos an auth method for the content server?  User can install a header viewing tool like iehttpheaders IE plugin (http://www.blunck.se/iehttpheaders/iehttpheaders.html)  or the httpheaders firefox extension to see the headers.  You should see this header ( WWW-Authenticate: Negotiate) if Kerberos is supported on the content server.  Here is an example of a full http header:
+{{{
 
 HTTP/1.1 401 Unauthorized
 Content-Length: 1656
@@ -97,6 +98,7 @@ Server: Microsoft-IIS/6.0
 WWW-Authenticate: Negotiate
 WWW-Authenticate: NTLM
 
+}}}
 ===Configuring your browser to use Kerberos ===
 
   * *Configuring Internet Explorer to support Kerberos for the specified content server* -In IE you will need to add the content site to the Intranet sites for your browser to allow kerberos.  Tools ->  Internet Options -> Security Tab -> Local Intranet.  Also click on the "custom level" and verify that   underneath "User Authentication -> Logon"  you see "Automatic  logon with current username and password." is selected.  If this still does not fix the issue, customers have reported that updated the browser to 7.0 fixes this problem.
