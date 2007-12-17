@@ -12,7 +12,7 @@ A: This is due to not configuring Windows Integrated Authentication for the Logi
 Q:  When I go to Login.aspx  on the SAML Bridge, I receive a message that says "ac.log permission denied."
 
 A:  This is due to NETWORK SERVICE not having "Full" permissions for ac.log.  Add full file permissions for NETWORK SERVICE to the file using Windows Explorer.
- 
+
 Q: When I go to Login.aspx on the SAML Bridge I receive a 404 from IIS even though I can see that the page exists. 
  
 A: This will happen when the ASP .NET web extension in IIS is prohibited.  To allow this extension, go to IIS Manager tree view, under the host name, click Web Service Extensions. In the Web Service Extensions panel, look for ASP.NET v2.0 or later.  Click on  the Allow button.
@@ -28,21 +28,17 @@ Q:  When I go to gsa simulator I recieve a message that says "ac.log permission 
 
 A:  This is due to NETWORK SERVICE not having "Full" permissions to either the ac.log or gsa.log.  Add full file permissions for NETWORK SERVICE using Windows Explorer.
 
-
 Q: When running a search on the gsa simulator I get a 404 response.
 
 A: Verify that in the web.config file for the gsa simulator the field that starts with 'add key="ac"'  points to the SAML Bridge.  Also verify that in the web.config file for the SAML Bridge, the field that starts with "add key="artifact_consumer"  is pointing to the gsa simulator.
-
 
 Q:  I am getting a "Deny" in the gsa-simulator.
 
 A:  First verify that Kerberos is working when you go directly to the site by checking that the Content Server supports Kerberos and that your borwser supports kerberos.  Make sure that the content server you are testing against uses kerberos.  The next step is to make sure that delegation is properly setup.  See this link:  http://code.google.com/apis/searchappliance/documentation/50/admin/wia.html#prereq_activedir   Note that we have seen issues  where specifying a port when running setspn can cause delegation to fail.  Also verify that the gsa_simulator and the saml_bridge are running in IIS app pools that have the NETWORK SERVICE identity. 
 
-
 Q: In the gsa-simulator I am getting an "Indetermintent" response
 
 A: First make sure that the URL that you are testing is accessible to the SAML Bridge, and that it supports kerberos.  If it does, then you will need to check the ac.log.  If you see this message:  "Either a requied impersonation level was not provided...."  then most likely the .net framework is wrong version.  See this LINK to set .net framework in IIS to 2.0.
-
 
 ===Troubleshooting the GSA and SAML Bridge===
 
@@ -50,16 +46,13 @@ Q: The Search Appliance is prompting me for a username and password.
 
 A: This will happen if you have not selected the "Disable prompt for Basic authentication or NTLM authentication" on the " Google Search Appliance > Serving > Access Control" page of the admin console or if you have a connector configured on the "Google Search Appliance > Connector Administration > Connectors" page in the admin console.
 
-
 Q: The field "Disable prompt for Basic authentication or NTLM authentication" is not available on the " Google Search Appliance > Serving > Access Control" admin console page.
 
 A: This will happen if you do not have content defined in the "Google Search Appliance > Crawl and Index > Crawler Access" page in the Admin Console.  It will also happen if you have LDAP configured on the " Google Search Appliance > Administration > LDAP Setup" in the admin conosle.
 
-
 Q: When running a search on the GSA I get a 404
 
 A: Make sure that GSA is pointing to the right URLs.  This is configured in the admin console on the " Google Search Appliance > Serving > Access Control" page.  Verify that the 'User Login URL', 'Artifact Resolver URL', and 'Authorization URL' fields point to the correct URLs on the SAML Bridge. Also verify that in the web.config file for the SAML Bridge, the field that starts with "add key="artifact_consumer"  is pointing to the appliance.
-
 
 
 ===Troubleshooting Kerberos and content servers ===
@@ -69,26 +62,21 @@ Q:  Is configuring Kerberos on my content server supported?
 A:  Generally it is not supported, but please see this document http://code.google.com/p/google-saml-bridge-for-windows/wiki/ConfigKerberos
 and the following FAQs for additional help.
 
-
 Q: How do I tell if my content server supports Kerberos.
 
 A: See this link for more info on how to find the Negotiate Header
-
 
 Q: The content server is sending the Negotiate header, but my browser is still prompting me for a password.
 
 A:  See the link on configuring your Browser for Kerberos: LINK 
 
-
 Q:  Sharepoint is prompting for a password.  Kerberos does not seem to be configured on Sharepont.
 
 A: Sharepoint forces NTLM when it is installed.  See this link to setup Kerberos with sharepoint:   http://support.microsoft.com/kb/215383 
 
-
 Q: Does the SAML Bridge support DFS?
 
 A: DFS is not a supported content server, but some have managed to get it to work with the SAML Bridge.  See this LINK for more details.
-
 
 == Troubleshooting checks/methods ==
 
