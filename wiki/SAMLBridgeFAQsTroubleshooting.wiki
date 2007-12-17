@@ -11,7 +11,7 @@ A: This is due to not configuring Windows Integrated Authentication for the Logi
 
 Q:  When I go to Login.aspx  on the SAML Bridge, I receive a message that says "ac.log permission denied."
 
-A:  This is due to NETWORK SERVICE not having "Full" permissions for ac.log.  Add full file permissions for NETWORK SERVICE to the file using Windows Explorer.
+A:  This is due to NETWORK SERVICE not having "Full" permissions for ac.log which is in the saml-bridge folder.  Add full file permissions for NETWORK SERVICE to the file using Windows Explorer.
 
 Q: When I go to Login.aspx on the SAML Bridge I receive a 404 from IIS even though I can see that the page exists. 
 
@@ -24,9 +24,9 @@ A: Does your browser support Kerberos?  See below for info on configuring your b
 
 ===Using the GSA Simulator===
 
-Q:  When I go to gsa simulator I recieve a message that says "ac.log permission denied" or "gsa.log permission denied."
+Q:  When I go to gsa simulator I recieve a message that says "gsa.log permission denied."
 
-A:  This is due to NETWORK SERVICE not having "Full" permissions to either the ac.log or gsa.log.  Add full file permissions for NETWORK SERVICE using Windows Explorer.
+A:  This is due to NETWORK SERVICE not having "Full" permissions to either the gsa.log in the gsa-simulator folder.  Add full file permissions for NETWORK SERVICE using Windows Explorer.
 
 Q: When running a search on the gsa simulator I get a 404 response.
 
