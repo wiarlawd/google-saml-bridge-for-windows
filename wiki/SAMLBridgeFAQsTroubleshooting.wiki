@@ -101,7 +101,7 @@ WWW-Authenticate: NTLM
 }}}
 ===Configuring your browser to use Kerberos ===
 
-  * *Configuring Internet Explorer to support Kerberos for the specified content server* -In IE you will need to add the content site to the Intranet sites for your browser to allow kerberos.  Tools ->  Internet Options -> Security Tab -> Local Intranet.  Also click on the "custom level" and verify that   underneath "User Authentication -> Logon"  you see "Automatic  logon with current username and password." is selected.  If this still does not fix the issue, customers have reported that updated the browser to 7.0 fixes this problem.
+  * *Configuring Internet Explorer to support Kerberos for the specified content server* -In IE you will need to add the content site to the Intranet sites for your browser to allow kerberos.  Tools ->  Internet Options -> Security Tab -> Local Intranet.  Also click on the "custom level" and verify that   underneath "User Authentication -> Logon"  you see "Automatic  logon with current username and password." is selected.  If this still does not fix the issue, users have reported that updated the browser to 7.0 fixes this problem.
 
   * *Configuring Firefox to support Kerberos for the specified content server* - You can edit the about.config param network.negotiate-auth.trusted.uris.  See this URL for more info on firefox and Kerberos: http://www.grolmsnet.de/kerbtut/firefox.html
 
