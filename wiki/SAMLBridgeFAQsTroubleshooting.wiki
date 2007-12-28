@@ -22,6 +22,7 @@ Q: I am prompted for a password when I go to the Login.aspx page or any other pa
 A: Does your browser support Kerberos?  See below for info on configuring your browser to use Kerberos.
 
 Q: I am unable to run the SAML Bridge under the NETWORK SERVICE account.
+
 A: This can happen if you have configured IIS as stated in this article.  http://support.microsoft.com/?kbid=332167 Reverse these steps.  
 
 ===Using the GSA Simulator===
