@@ -21,6 +21,8 @@ Q: I am prompted for a password when I go to the Login.aspx page or any other pa
 
 A: Does your browser support Kerberos?  See below for info on configuring your browser to use Kerberos.
 
+Q: I am unable to run the SAML Bridge under the NETWORK SERVICE account.
+A: This can happen if you have configured IIS as stated in this article.  http://support.microsoft.com/?kbid=332167 Reverse these steps.  
 
 ===Using the GSA Simulator===
 
@@ -54,6 +56,9 @@ Q: When running a search on the GSA I get a 404
 
 A: Make sure that GSA is pointing to the right URLs.  This is configured in the admin console on the " Google Search Appliance > Serving > Access Control" page.  Verify that the 'User Login URL', 'Artifact Resolver URL', and 'Authorization URL' fields point to the correct URLs on the SAML Bridge. Also verify that in the web.config file for the SAML Bridge, the field that starts with "add key="artifact_consumer"  is pointing to the appliance.
 
+Q: A 500 error is returned by the appliance
+
+A: This can happen if the SAML bridge web.config file is pointing to a different GSA hostname (or IP) than the hostname that you used when initially doing your search.  This is because the GSA sets a cookie on your browser when you initially do a search, and the browser will not send this cookie to the appliance when the SAML bridge redirects you back to the appliance.  If you do not have the cookie, the appliance will abort the search.  To make sure you don't see this issue, be sure to query the appliance with the exact same name that you use in the web.config file for the SAML Bridge.     
 
 ===Troubleshooting Kerberos and content servers ===
 
