@@ -97,134 +97,139 @@ namespace SAMLServices.Wia
 		/// <param name="subject">account to be tested, in the form of username@domain</param>
 		/// <returns>Permit|Deny|Intermediate</returns>
 
-		public String GetPermission(String url, String subject)
-		{
-			Common.debug("inside AuthImpl::GetPermission");
-			Common.debug("url=" + url);
-			Common.debug("subject=" + subject);
-			// Convert the user name from domainName\userName format to 
-			// userName@domainName format if necessary
+        public String GetPermission(String url, String subject)
+        { 
+            return "Indeterminate";
+        }
+
+        //public String ____GetPermission(String url, String subject) 
+        //{
+        //    Common.debug("inside AuthImpl::GetPermission");
+        //    Common.debug("url=" + url);
+        //    Common.debug("subject=" + subject);
+        //    // Convert the user name from domainName\userName format to 
+        //    // userName@domainName format if necessary
 	
-			// The WindowsIdentity(string) constructor uses the new
-			// Kerberos S4U extension to get a logon for the user
-			// without a password.
+        //    // The WindowsIdentity(string) constructor uses the new
+        //    // Kerberos S4U extension to get a logon for the user
+        //    // without a password.
 
-			// Default AuthZ decision is set to "Deny"
-			//String status = "Deny";
-            String status = "Indeterminate";//amit changed this
+        //    // Default AuthZ decision is set to "Deny"
+        //    //String status = "Deny";
+        //    String status = "Indeterminate";//amit changed this
 
-			// Attempt to impersonate the user and verify access to the URL
-			WindowsImpersonationContext wic = null;
-			try
-			{
-				status = "before impersonation";
-				Common.debug("before WindowsIdentity");
-				// Create a Windows Identity
-				WindowsIdentity wi = new WindowsIdentity(subject);
-				if (wi == null)
-				{
-					Common.error("Couldn't get WindowsIdentity for account " + subject);
-					return "Indeterminate";
-				}
-				Common.debug("name=" + wi.Name + ", authed=" + wi.IsAuthenticated);				
-				Common.debug("after WindowsIdentity");
-				// Impersonate the user
-				wic = wi.Impersonate();
-				Common.debug("after impersonate");
-				// Attempt to access the network resources as this user
-                if (url.StartsWith("http"))
-                    status = GetURL(url, CredentialCache.DefaultCredentials);
-                else if (url.StartsWith("smb"))
-                {
-                    String file = url;
-                    file = file.Replace("smb://", "\\\\");
-                    status = GetFile(file, wi);
-                }
-                else if (url.StartsWith("\\\\"))
-                {
-                    status = GetFile(url, wi);
-                }
-                else
-                {
-                    //status = "Deny";
-                    status = "Indeterminate";//Amit changed this
-                }
-                // Successfully retrieved URL, so set AuthZ decision to "Permit"
-			}
-			catch(SecurityException e)
-			{
-				Common.error("AuthImpl::caught SecurityException");
-				// Determine what sort of exception was thrown by checking the response status
-				Common.error("e = " + e.ToString());
-				Common.error("msg = " + e.Message);
-				Common.error("grantedset = " + e.GrantedSet);
-				Common.error("innerException= " + e.InnerException);
-				Common.error("PermissionState = " + e.PermissionState);
-				Common.error("PermissionType = " + e.PermissionType);
-				Common.error("RefusedSet = " + e.RefusedSet);
-				Common.error("TargetSet = " + e.TargetSite);
-				status = "Indeterminate";
-				return status;
-			}
-			catch(WebException e)
-			{
-				if( wic != null)
-				{
-					wic.Undo();
-					wic = null;
-				}
-				Common.debug("AuthImpl::caught WebException");
-				// Determine what sort of exception was thrown by checking the response status
-				Common.debug("e = " + e.ToString());
-				HttpWebResponse resp = (HttpWebResponse)((WebException)e).Response;
+        //    // Attempt to impersonate the user and verify access to the URL
+        //    WindowsImpersonationContext wic = null;
+        //    try
+        //    {
+        //        status = "before impersonation";
+        //        Common.debug("before WindowsIdentity");
+        //        // Create a Windows Identity
+        //        WindowsIdentity wi = new WindowsIdentity(subject);
+        //        if (wi == null)
+        //        {
+        //            Common.error("Couldn't get WindowsIdentity for account " + subject);
+        //            return "Indeterminate";
+        //        }
+        //        Common.debug("name=" + wi.Name + ", authed=" + wi.IsAuthenticated);				
+        //        Common.debug("after WindowsIdentity");
+        //        // Impersonate the user
+        //        wic = wi.Impersonate();
+        //        Common.debug("after impersonate");
+        //        // Attempt to access the network resources as this user
+        //        if (url.StartsWith("http"))
+        //            status = GetURL(url, CredentialCache.DefaultCredentials);
+        //        else if (url.StartsWith("smb"))
+        //        {
+        //            String file = url;
+        //            file = file.Replace("smb://", "\\\\");
+        //            status = GetFile(file, wi);
+        //        }
+        //        else if (url.StartsWith("\\\\"))
+        //        {
+        //            status = GetFile(url, wi);
+        //        }
+        //        else
+        //        {
+        //            //status = "Deny";
+        //            status = "Indeterminate";//Amit changed this
+        //        }
+        //        // Successfully retrieved URL, so set AuthZ decision to "Permit"
+        //    }
+        //    catch(SecurityException e)
+        //    {
+        //        Common.error("AuthImpl::caught SecurityException");
+        //        // Determine what sort of exception was thrown by checking the response status
+        //        Common.error("e = " + e.ToString());
+        //        Common.error("msg = " + e.Message);
+        //        Common.error("grantedset = " + e.GrantedSet);
+        //        Common.error("innerException= " + e.InnerException);
+        //        Common.error("PermissionState = " + e.PermissionState);
+        //        Common.error("PermissionType = " + e.PermissionType);
+        //        Common.error("RefusedSet = " + e.RefusedSet);
+        //        Common.error("TargetSet = " + e.TargetSite);
+        //        status = "Indeterminate";
+        //        return status;
+        //    }
+        //    catch(WebException e)
+        //    {
+        //        if( wic != null)
+        //        {
+        //            wic.Undo();
+        //            wic = null;
+        //        }
+        //        Common.debug("AuthImpl::caught WebException");
+        //        // Determine what sort of exception was thrown by checking the response status
+        //        Common.debug("e = " + e.ToString());
+        //        HttpWebResponse resp = (HttpWebResponse)((WebException)e).Response;
 				
-                if (resp != null)
-					Common.debug("status = " + resp.StatusCode.ToString());
-				else
-				{
-					Common.debug("response is null");
-					status = "Indeterminate";//amit changed this
-					return status;
-				}
-				//status = "Deny";
-                status = "Indeterminate";
-			}
-			catch(UnauthorizedAccessException e) //can't write to the log file
-			{
-                if (wic != null)
-				{
-					wic.Undo();
-					wic = null;
-				}
-                Common.debug("caught UnauthorizedAccessException - sending status as Indeterminate");
-                Common.debug(e.Message);
-                //status = "Deny";
-                status = "Indeterminate";//amit changed this
-			}
-			catch(Exception e)
-			{
-				if( wic != null)
-				{
-					wic.Undo();
-					wic = null;
-				}
-				// Some undetermined exception occured
-				// Setting the AuthZ decision to "Indeterminate" allows the GSA to use other
-				// AuthZ methods (i.e. Basic, NTLM, SSO) to determine access
-				Common.error("AuthImpl::caught exception");
-				Common.error(e.Message);
-				status = "Indeterminate, unknown exception, check ac.log";
-			}
-			finally
-			{
-				// Make sure to remove the impersonation token
-				if( wic != null)
-					wic.Undo();
-				Common.debug("exit AuthImpl::GetPermission::finally status=" + status);
-			}
-			Common.debug("exit AuthImpl::GetPermission return status=" + status);
-			return status;
-		}
+        //        if (resp != null)
+        //            Common.debug("status = " + resp.StatusCode.ToString());
+        //        else
+        //        {
+        //            Common.debug("response is null");
+        //            status = "Indeterminate";//amit changed this
+        //            return status;
+        //        }
+        //        //status = "Deny";
+        //        status = "Indeterminate";
+        //    }
+        //    catch(UnauthorizedAccessException e) //can't write to the log file
+        //    {
+        //        if (wic != null)
+        //        {
+        //            wic.Undo();
+        //            wic = null;
+        //        }
+        //        Common.debug("caught UnauthorizedAccessException - sending status as Indeterminate");
+        //        Common.debug(e.Message);
+        //        //status = "Deny";
+        //        status = "Indeterminate";//amit changed this
+        //    }
+        //    catch(Exception e)
+        //    {
+        //        if( wic != null)
+        //        {
+        //            wic.Undo();
+        //            wic = null;
+        //        }
+        //        // Some undetermined exception occured
+        //        // Setting the AuthZ decision to "Indeterminate" allows the GSA to use other
+        //        // AuthZ methods (i.e. Basic, NTLM, SSO) to determine access
+        //        Common.error("AuthImpl::caught exception");
+        //        Common.error(e.Message);
+        //        status = "Indeterminate, unknown exception, check ac.log";
+        //    }
+        //    finally
+        //    {
+        //        // Make sure to remove the impersonation token
+        //        if( wic != null)
+        //            wic.Undo();
+        //        Common.debug("exit AuthImpl::GetPermission::finally status=" + status);
+        //    }
+        //    Common.debug("exit AuthImpl::GetPermission return status=" + status);
+        //    return status;
+        //}
 
 		/// <summary>
 		/// Method to perform an HTTP GET request for a URL.
