@@ -1,5 +1,5 @@
 #summary SAML Bridge for Windows Standalone Installer 2.0
-#labels Featured,Phase-Deploy
+#labels Featured
 
 = Introduction =
 
@@ -55,8 +55,6 @@ To install the SAML Bridge:
 Granting access permissions for the SAML bridge log file (i.e. ac.log file) for all users is done using the installer, and is no longer part of the manual step post-installation. However, setting the authentication requirements for the saml bridge Login.aspx page will still be a part of the manual step post-installation and can be found on site http://code.google.com/apis/searchappliance/documentation/68/wia/wia.html#config_web_security_IIS7
 
 The steps for configuring the saml bridge can be found on site http://code.google.com/apis/searchappliance/documentation/68/wia/wia.html
-
-
 
 
 
