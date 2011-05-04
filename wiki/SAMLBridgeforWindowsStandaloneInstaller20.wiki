@@ -23,9 +23,9 @@ SAML bridge for Windows allows users to gain seamless access to content that res
 
 = Installation =
 
-The Google SAML bridge for Windows does not contain a check for the existence of !SharePoint installation on target servers, and hence can be installed on non-!SharePoint servers. Goto [#Pre-requisites]
+The Google SAML bridge for Windows does not contain a check for the existence of !SharePoint installation on target servers, and hence can be installed on non-!SharePoint servers. Prior to the installation, please refer the Pre-requisites section [#Pre-requisites]
 
-In case of any issues, please refer the Troubleshooting guide for the saml bridge, which can be found on http://code.google.com/p/google-saml-bridge-for-windows/wiki/SAMLBridgeFAQsTroubleshooting.
+In case of any issues, please refer the [http://code.google.com/p/google-saml-bridge-for-windows/wiki/SAMLBridgeFAQsTroubleshooting Troubleshooting guide for the saml bridge]
 
 ===Installing the SAML Bridge===
 
@@ -33,7 +33,7 @@ You can install the SAML Bridge on any IIS server that meets the prerequisites d
 
 To install the SAML Bridge:
 
-1. Start a web browser and navigate to http://code.google.com/p/google-saml-bridge-for-windows/downloads/list.
+1. Start a web browser and navigate to the [http://code.google.com/p/google-saml-bridge-for-windows/downloads/list http://code.google.com/p/google-saml-bridge-for-windows/downloads/list]
 
 2. Download the SAML bridge for Windows 2.0 package for your operating system (x86 or x64).
 
@@ -58,6 +58,6 @@ To install the SAML Bridge:
 
 = Post-Installation Configurations =
 
-Granting access permissions for the SAML bridge log file (i.e. ac.log file) for all users is done using the installer, and is no longer part of the manual step post-installation. However, setting the authentication requirements for the saml bridge Login.aspx page will still be a part of the manual step post-installation and can be found on site http://code.google.com/apis/searchappliance/documentation/68/wia/wia.html#config_web_security_IIS7
+Granting access permissions for the SAML bridge log file (i.e. ac.log file) for all users is done using the installer, and is no longer part of the manual step post-installation. However, setting the authentication requirements for the saml bridge Login.aspx page will still be a part of the manual step post-installation and can be found [http://code.google.com/apis/searchappliance/documentation/68/wia/wia.html#config_web_security_IIS7 http://code.google.com/apis/searchappliance/documentation/68/wia/wia.html#config_web_security_IIS7]
 
-The steps for configuring the SAML bridge can be found on site http://code.google.com/apis/searchappliance/documentation/68/wia/wia.html
+The steps for configuring the SAML bridge can be found on site [http://code.google.com/apis/searchappliance/documentation/68/wia/wia.html http://code.google.com/apis/searchappliance/documentation/68/wia/wia.html]
