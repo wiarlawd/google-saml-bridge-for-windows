@@ -23,7 +23,7 @@ SAML bridge for Windows allows users to gain seamless access to content that res
 
 = Installation =
 
-The Google SAML bridge for Windows does not contain a check for the existence of !SharePoint installation on target servers, and hence can be installed on non-!SharePoint servers. Prior to the installation, please refer the section [Pre-requisites#Pre-requisites]
+The Google SAML bridge for Windows does not contain a check for the existence of !SharePoint installation on target servers, and hence can be installed on non-!SharePoint servers. Prior to the installation, please refer the section [#Pre-requisites]
 
 In case of any issues, please refer the [http://code.google.com/p/google-saml-bridge-for-windows/wiki/SAMLBridgeFAQsTroubleshooting Troubleshooting guide for the saml bridge]
 
