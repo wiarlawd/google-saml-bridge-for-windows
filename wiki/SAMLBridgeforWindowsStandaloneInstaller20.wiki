@@ -45,13 +45,15 @@ To install the SAML Bridge:
 
 6. Click Next.
 
-7. Click Install.
+7. Accept the License Agreement and click Next.
 
-8. Enter the correct port number. The installer creates a web site in IIS with the port number you enter.
+8. Click Install.
 
-9. Enter the value for the Artifact Consumer URL in the SAML bridge configuration wizard screen and click on Save.
+9. Enter the valid unused port number. The installer creates a web site in IIS with the port number you enter.
 
-10. Once the installation is complete, a web site named saml-bridge-for-windows is created with two virtual directories, GSA-simulator and saml-bridge.
+10. Enter the value for the Artifact Consumer URL in the SAML bridge configuration wizard screen and click on Save, and Finish the installation.
+
+11. Once the installation is complete, a web site named saml-bridge-for-windows is created with two virtual directories, GSA-simulator and saml-bridge.
 
 
 = Post-Installation Configurations =
