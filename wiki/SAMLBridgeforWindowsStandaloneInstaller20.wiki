@@ -49,7 +49,7 @@ To install the SAML Bridge:
 
 8. Click Install.
 
-9. Enter the valid unused port number. The installer creates a web site in IIS with the port number you enter.
+9. Enter a valid unused port number. The installer creates a web site in IIS with the port number you enter.
 
 10. Enter the value for the Artifact Consumer URL in the SAML bridge configuration wizard screen and click on Save, and Finish the installation.
 
