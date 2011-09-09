@@ -49,3 +49,24 @@ You need to copy the public key in text format and paste it into the SAML config
 ===Configure GSA to use SAML Bridge with Post Binding===
 
 In GSA Admin console, go to Serving->Universal Login Auth Mechanisms, select SAML tab, Enter a value in Mechanism Name. Enter a value in IDP Entity ID. You need to enter the same value in  the web.config in SAML Bridge. Enter http://<URL to the saml bridge>/Post.aspx in the Login URL field. Open the saved certificate file in a text editor. Copy the content and paste it in the Public Key of IDP field. Click Save.
+
+==2. Configurable username format during SAML authentication==
+
+SAML bridge 2.8 provides facility to configure the username format returned by the SAML authentication which matches your authorization mechanism on the GSA.
+
+In web.config, see the following parameter:
+
+<!-- available format: user@domain, user, domain\user-->
+<add key="subject_format" value="user@domain"/>
+
+You can provide either of  user@domain, user or domain\user as a value for the key "subject_format".
+
+==3. Configurable authorization trust duration value==
+
+In web.config, see the following parameter:
+
+<!-- trust duration in seconds - the SAML Bridge machine and the GSA must be synced to the same NTP server-->
+
+<add key="trust_duration" value="300"/>
+
+By default, the value is 300 seconds (5 min). You may change this to optimal value depending on your setup.
