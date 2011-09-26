@@ -35,11 +35,11 @@ In order for SAML Bridge to load the certificate which contains the private key 
 
 To show the accounts that have access to this certificate:
 
-winhttpcertcfg -l -c LOCAL_MACHINE\My -s keyword_identified_above
+winhttpcertcfg -l -c LOCAL_MACHINE\My -s any_word_in_the_subject_attribute_of_the_certificate
 
 To grant to access to the certificate to account "Network Service"
 
-winhttpcertcfg -g -c LOCAL_MACHINE\My -s keyword_identified_above -a "Network Service"
+winhttpcertcfg -g -c LOCAL_MACHINE\My -s any_word_in_the_subject_attribute_of_the_certificate -a "Network Service"
 
 ===Get public key===
 
