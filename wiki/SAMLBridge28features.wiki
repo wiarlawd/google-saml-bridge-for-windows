@@ -14,6 +14,12 @@ Windows SAML Bridge 2.8 has the following three new features:
 
 == 1. SAML Bridge Post binding ==
 
+===Ensure Post.aspx is properly configured for security===
+
+Make sure Post.aspx is protected in the deployed SAML Bridge on IIS.  Inside IIS Manager, click on Post.aspx in the SAML Bridge site, click on the File Security tab, and make sure the following options are set:
+
+Deselect "Enable anonymous access".
+Select "Integrated Windows authentication" for Authenticated Access.
 
 ===Configure SAML Bridge to use the private key for Post Binding===
 
@@ -40,13 +46,6 @@ winhttpcertcfg -l -c LOCAL_MACHINE\My -s any_word_in_the_subject_attribute_of_th
 To grant to access to the certificate to account "Network Service"
 
 winhttpcertcfg -g -c LOCAL_MACHINE\My -s any_word_in_the_subject_attribute_of_the_certificate -a "Network Service"
-
-===Ensure Post.aspx is properly configured for security===
-
-Make sure Post.aspx is protected in the deployed SAML Bridge on IIS.  Inside IIS Manager, click on Post.aspx in the SAML Bridge site, click on the File Security tab, and make sure the following options are set:
-
-Deselect "Enable anonymous access".
-Select "Integrated Windows authentication" for Authenticated Access.
 
 ===Get public key===
 
