@@ -1,5 +1,5 @@
 #summary Release Notes for Google SAML Bridge for Windows 2.0 64-bit
-#labels ReleaseNotes,v20,x64
+#labels ReleaseNotes,v20,x64,Phase-Deploy,Deprecated
 
 =Release Notes for Google SAML Bridge for Windows 2.0 64-bit=
 
