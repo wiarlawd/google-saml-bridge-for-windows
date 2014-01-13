@@ -1,5 +1,5 @@
 #summary SAML Bridge for Windows Standalone Installer 2.0
-#labels Featured
+#labels Phase-Deploy,Deprecated
 
 = Introduction =
 
