@@ -1,0 +1,19 @@
+#summary Downloading the SAML Bridge for Windows in Google Search Appliance Connector
+#labels Phase-Deploy
+*Downloading the SAML Bridge for Windows in Google Search Appliance Connector*
+
+For customers who qualify for enterprise-level support, Google
+provides support for the Google Search Appliance Connectors. You can
+go to the [http://www.google.com/enterprise/portal Enterprise Support Portal]
+to download supported versions of the SAML Bridge for Windows or contact Google Enterprise 
+Support.
+
+To download installers for the Google Search Appliance Resource Kit for !SharePoint, see the
+[https://code.google.com/p/googlesearchapplianceconnectors/downloads/list Downloads]
+page on the 
+[https://code.google.com/p/googlesearchapplianceconnectors/ installers code site].
+
+For unsupported builds, early access, or to download supported patches
+as directed by Google Enterprise Support, see the [http://code.google.com/p/google-saml-bridge-for-windows/downloads/list Downloads] page on this code site.
+
+Google may not provide support for builds downloaded from the code sites.
