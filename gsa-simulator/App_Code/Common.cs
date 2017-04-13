@@ -131,7 +131,7 @@ using System.IO.Compression;
 			Response.Write("<style><!--					body,td,div,.p,a,.d,.s{font-family:arial,sans-serif}--></style>");
 			Response.Write("</head><body><table cellspacing='10'><tr><td>");
 			Response.Write("<img src='google_logo.png' height='41' width='116' ");
-			Response.Write("alt='logo.gif'/></td></tr><tr><td><font size='5'>");
+			Response.Write("alt='logo'/></td></tr><tr><td><font size='5'>");
 			Response.Write("Google Search Appliance Security SPI Simulator");
 			Response.Write("</font></td></tr></table>");
 			Response.Write("<br>");
