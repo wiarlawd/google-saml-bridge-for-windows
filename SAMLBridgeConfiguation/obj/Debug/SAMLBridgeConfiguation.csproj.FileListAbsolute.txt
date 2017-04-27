@@ -1,0 +1,13 @@
+C:\_tag\SAMLBridgeConfiguration\SAMLBridgeConfiguation\bin\Debug\SAMLConfigurationManager.cs
+C:\_tag\SAMLBridgeConfiguration\SAMLBridgeConfiguation\bin\Debug\SAMLBridgeConfiguation.exe
+C:\_tag\SAMLBridgeConfiguration\SAMLBridgeConfiguation\bin\Debug\SAMLBridgeConfiguation.pdb
+C:\_tag\SAMLBridgeConfiguration\SAMLBridgeConfiguation\obj\Debug\SAMLBridgeConfiguation.csprojResolveAssemblyReference.cache
+C:\_tag\SAMLBridgeConfiguration\SAMLBridgeConfiguation\obj\Debug\SAMLConfiguration.frmSAMLConfiguration.resources
+C:\_tag\SAMLBridgeConfiguration\SAMLBridgeConfiguation\obj\Debug\SAMLBridgeConfiguation.Properties.Resources.resources
+C:\_tag\SAMLBridgeConfiguration\SAMLBridgeConfiguation\obj\Debug\SAMLBridgeConfiguation.csproj.GenerateResource.Cache
+C:\_tag\SAMLBridgeConfiguration\SAMLBridgeConfiguation\obj\Debug\SAMLBridgeConfiguation.exe
+C:\_tag\SAMLBridgeConfiguration\SAMLBridgeConfiguation\obj\Debug\SAMLBridgeConfiguation.pdb
+C:\ADFS\samlbridge\SAMLBridgeConfiguation\obj\Debug\SAMLBridgeConfiguation.exe
+C:\ADFS\samlbridge\SAMLBridgeConfiguation\obj\Debug\SAMLBridgeConfiguation.pdb
+C:\_tag\google-saml-bridge-for-windows\SAMLBridgeConfiguation\obj\Debug\SAMLBridgeConfiguation.exe
+C:\_tag\google-saml-bridge-for-windows\SAMLBridgeConfiguation\obj\Debug\SAMLBridgeConfiguation.pdb
