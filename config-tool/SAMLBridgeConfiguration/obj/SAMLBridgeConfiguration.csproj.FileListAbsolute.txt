@@ -1,9 +1,0 @@
-C:\_tag\google-saml-bridge-for-windows\Config-Tool\SAMLBridgeConfiguration\obj\Release\SAMLBridgeConfiguration.exe
-C:\_tag\google-saml-bridge-for-windows\Config-Tool\SAMLBridgeConfiguration\obj\Release\SAMLBridgeConfiguration.pdb
-C:\_tag\google-saml-bridge-for-windows\Config-Tool\SAMLBridgeConfiguration\bin\Release\SAMLConfigurationManager.cs
-C:\_tag\google-saml-bridge-for-windows\Config-Tool\SAMLBridgeConfiguration\bin\Release\SAMLBridgeConfiguration.exe
-C:\_tag\google-saml-bridge-for-windows\Config-Tool\SAMLBridgeConfiguration\bin\Release\SAMLBridgeConfiguration.pdb
-C:\_tag\google-saml-bridge-for-windows\Config-Tool\SAMLBridgeConfiguration\obj\Release\ResolveAssemblyReference.cache
-C:\_tag\google-saml-bridge-for-windows\Config-Tool\SAMLBridgeConfiguration\obj\Release\SAMLConfiguration.frmSAMLConfiguration.resources
-C:\_tag\google-saml-bridge-for-windows\Config-Tool\SAMLBridgeConfiguration\obj\Release\SAMLBridgeConfiguration.Properties.Resources.resources
-C:\_tag\google-saml-bridge-for-windows\Config-Tool\SAMLBridgeConfiguration\obj\Release\SAMLBridgeConfiguration.csproj.GenerateResource.Cache
